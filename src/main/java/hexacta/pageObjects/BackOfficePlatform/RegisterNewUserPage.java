@@ -24,12 +24,12 @@ public class RegisterNewUserPage extends BasePageObject {
         super(By.id("page-container"));
     }
 
-    public Input setUsername() {
+    public Input txtUsername() {
         waitUntil(() -> (new Input(usernameField).isDisplayed() ? true : false));
         return new Input(usernameField);
     }
 
-    public Input setPassword() {
+    public Input txtPassword() {
         waitUntil(() -> (new Input(passwordField).isDisplayed() ? true : false));
         return new Input(passwordField);
     }
@@ -82,13 +82,12 @@ public class RegisterNewUserPage extends BasePageObject {
         }
     }
 
-    public boolean btnSubmitIsEnabled() {
+    public boolean waitUntilBtnSubmitIsEnabled() {
         return waitUntil(() -> new Button(createUserButton).isEnabled() ? true : false);
-
     }
 
     public Button btnSubmit() {
-        this.btnSubmitIsEnabled();
+        this.waitUntilBtnSubmitIsEnabled();
         return new Button(createUserButton);
     }
 }

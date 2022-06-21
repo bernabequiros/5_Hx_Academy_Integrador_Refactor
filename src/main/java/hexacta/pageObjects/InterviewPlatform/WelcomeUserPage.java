@@ -14,7 +14,7 @@ public class WelcomeUserPage extends BasePageObject  {
         super(By.id("page-container"));
     }
 
-    public Label getUsernameText() {
+    public Label LblUsername() {
         try {
             return new Label(usernameText);
 
@@ -23,7 +23,7 @@ public class WelcomeUserPage extends BasePageObject  {
         }
     }
 
-    public Label getWelcomeText() {
+    public Label LblWelcome() {
         try {
             return new Label(welcomeText);
         } catch (Exception e) {

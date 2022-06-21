@@ -8,28 +8,20 @@ public class Checkbox extends BaseControl {
     }
 
     public void check() {
-
         if (this.isChecked()) {
             return;
-        } else {
-            this.webElement().click();
-        }
+            } 
+        this.webElement().click();   
     }
 
     public boolean isChecked() {
-        if (this.webElement().isSelected()) {
-            return true;
-        } else {
-            return false;
-        }
+        return this.webElement().isSelected();
     }
 
     public void uncheck() {
         if (!this.isChecked()) {
             return;
-        } else {
-            this.webElement().click();
-        }
+            } 
+        this.webElement().click();
     }
-
 }

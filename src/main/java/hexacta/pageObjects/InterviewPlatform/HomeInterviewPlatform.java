@@ -20,11 +20,11 @@ public class HomeInterviewPlatform extends BasePageObject {
         driver.get(url);
     }
 
-    public Input setUsername() {
+    public Input txtUsername() {
         return new Input(userField);
     }
 
-    public Input setPassword() {
+    public Input txtPassword() {
         return new Input(passwordField);
     }
 
@@ -32,7 +32,7 @@ public class HomeInterviewPlatform extends BasePageObject {
         return new Button(submitButton);
     }
 
-    public Label getLoginText() {
+    public Label LblLogin() {
         waitUntil(() -> new Label(loginMessage).isDisplayed()? true : false);
         try {
             return new Label(loginMessage);
