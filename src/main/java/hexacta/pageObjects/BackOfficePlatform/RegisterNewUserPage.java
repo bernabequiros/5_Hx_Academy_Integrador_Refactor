@@ -82,12 +82,7 @@ public class RegisterNewUserPage extends BasePageObject {
         }
     }
 
-    public boolean waitUntilBtnSubmitIsEnabled() {
-        return waitUntil(() -> new Button(createUserButton).isEnabled() ? true : false);
-    }
-
     public Button btnSubmit() {
-        this.waitUntilBtnSubmitIsEnabled();
         return new Button(createUserButton);
     }
 }
